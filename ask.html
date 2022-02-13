@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLU | Post</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&display=swap"
+        rel="stylesheet">
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/136c117dcb.js" crossorigin="anonymous"></script>
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: #FC76A1;">
+                <img src="assets/heartbox.png" alt="" width="26" height="26" class="d-inline-block align-text-top">
+                Totally Love Us
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li> -->
+                </ul>
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item hover-item">
+                        <a class="nav-link active" aria-current="page" href="ask.html"><i class="fa-solid fa-circle-plus" style="font-size: 2.5vw;color: #FC76A1;"></i></a>
+                    </li> 
+                    <li class="nav-item hover-item">
+                        <a class="nav-link active" aria-current="page" href="browse.html"><i class="fa-solid fa-globe" style="font-size: 2.5vw; margin-right: 1vw; color: #FC76A1;"></i></a>
+                    </li> 
+                    <li class="nav-item">
+                        <img src="assets/avatar.png" class="hover-item" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            style="height: 3.5vw; width: 3.5vw; background-color: #BC94F0; border-radius: 2vw; cursor: pointer;"
+                            alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: #1D1D26; border-radius: 2vw;">
+                <div class="modal-header"
+                    style="background-color: #1D1D26; border-color: #1D1D26; border-radius: 2vw; ">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: white; font-weight: 700;">Your
+                        Profile
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="background-color: #1D1D26; text-align: center; ">
+
+                    <div id="profilemodal">
+                        <img src="assets/avatar.png"
+                            style="height: 10vw; width: 10vw; background-color: #BC94F0; border-radius: 50%;" alt="">
+                    </div>
+                    <div style="height: 20px;"></div>
+                    <ul class="list-group list-group-flush">
+                        <li style="background-color: #1D1D26; color: #FC76A1; font-size: 20px; font-weight: 600;"
+                            class="list-group-item" id="profilename">Barry Allen</li>
+                        <li style="background-color: #1D1D26; color: #FC76A1;" class="list-group-item" id="profileage">
+                            20 <i class="fa-solid fa-mars"></i>
+                        </li>
+                        <li style="background-color: #1D1D26; color: #FC76A1;" class="list-group-item"
+                            id="profileemail">
+                            barry.allen@gmail.com
+                        </li>
+
+                        <li style="background-color: #1D1D26; color: #FC76A1;" class="list-group-item"
+                            id="profilephoneno">
+                        </li>
+                    </ul>
+
+                </div>
+                <div style="background-color: #1D1D26; text-align: center; border-radius: 2vw; margin-bottom: 1.5vw;">
+                    <a type="button" class="btn-lg hover-item" href="index.html"
+                        style="text-decoration: none; background-color: #30303D; border-color: #fc76a1; font-weight: 500; color: white; border-radius: 1vw;"><i
+                            class="fas fa-sign-out-alt"></i> Log Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function usercard(cardid) {
+            var personcards = document.getElementsByClassName('personcard');
+            for (i = 0; i < personcards.length; i++) {
+                personcards[i].style.border = 'solid 2px black';
+                personcards[i].style.color = 'white';
+
+            }
+            document.getElementById(cardid).style.color = "#FC76A1";
+            document.getElementById(cardid).style.border = "solid 2px #FC76A1";
+        }
+
+        function gender(sex) {
+            if (sex == 'male') {
+                document.getElementById('femalebtn').style.color = "#ed1e79";
+                document.getElementById('femalebtn').style.backgroundColor = "";
+                document.getElementById('malebtn').style.color = "white";
+                document.getElementById('malebtn').style.backgroundColor = "#0071bd";
+            } else {
+                document.getElementById('malebtn').style.color = "#0071bd";
+                document.getElementById('malebtn').style.backgroundColor = "";
+                document.getElementById('femalebtn').style.color = "white";
+                document.getElementById('femalebtn').style.backgroundColor = "#ed1e79";
+            }
+        }
+    </script>
+
+    <div class="container">
+
+        <div class="container my-5">
+            <h1>Who are you <span style="color: #FC76A1;">gifting</span> today?</h1>
+        </div>
+        <hr>
+        <div class="row m-5 justify-content-center">
+            <div class="col-3">
+                <div class="card hover-item personcard" id="card1" onclick="usercard(this.id)">
+                    <img src="assets/parent.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-text">Parents</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card hover-item personcard" id="card2" onclick="usercard(this.id)">
+                    <img src="assets/spouse.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-text">Spouse</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card hover-item personcard" id="card3" onclick="usercard(this.id)">
+                    <img src="assets/lover.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-text">Lover</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-5 justify-content-center">
+            <div class="col-3">
+                <div class="card hover-item personcard" id="card4" onclick="usercard(this.id)">
+                    <img src="assets/sibling.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-text">Sibling</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card hover-item personcard" id="card5" onclick="usercard(this.id)">
+                    <img src="assets/friend.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-text">Friend</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card hover-item personcard" id="card6" onclick="usercard(this.id)">
+                    <img src="assets/mentor.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-text">Mentor</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-5 justify-content-center">
+
+            <div class="col-3">
+                <div class="card hover-item personcard" id="card7" onclick="usercard(this.id)">
+                    <img src="assets/colleague.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-text">Colleague</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card hover-item personcard" id="card8" onclick="usercard(this.id)">
+                    <img src="assets/relative.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-text">Relative</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card hover-item personcard" id="card9" onclick="usercard(this.id)">
+                    <img src="assets/other.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-text">Other</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="container my-5">
+            <h1>Some more <span style="color: #FC76A1;">information</span> about the person!</h1>
+        </div>
+        <hr>
+        <br>
+        <h4><i class="fa-solid fa-venus-mars" style="color: #FC76A1;"></i> Gender</h4>
+        <br>
+        <button id="malebtn" onclick="gender('male')" class="btn"
+            style="border-color: #0071bd; color: #0071bd; margin-right: 20px"><i class="fa-solid fa-mars"></i>
+            Male</button>
+        <button id="femalebtn" onclick="gender('female')" class="btn" style="border-color: #ed1e79; color: #ed1e79;"><i
+                class="fa-solid fa-venus"></i> Female</button>
+
+        <br><br><br>
+        <h4><i class="fa-solid fa-clock" style="color: #FC76A1;"></i> Age</h4>
+        <br>
+        <div class="row g-3 align-items-center">
+
+            <div class="col-auto">
+                <input style="background-color: #1D1D26; border-color: #FC76A1; color: white;" type="text"
+                    id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline"
+                    placeholder="Enter age here">
+            </div>
+
+        </div>
+
+        <br><br>
+        <h4><i class="fa-solid fa-calendar" style="color: #FC76A1;"></i> Event</h4>
+        <p class="text-muted">Which event are you celebrating?<br> It could be birthday, aniversary, vallentine's day, anything! Enter it below!</p>
+      
+        <div class="row g-3 align-items-center">
+
+            <div class="col-auto">
+                <input style="background-color: #1D1D26; border-color: #FC76A1; color: white;" type="text"
+                    id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline"
+                    placeholder="Enter event name">
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <h4><i class="fa-solid fa-user-group" style="color: #FC76A1;"></i> Specific Relation</h4>
+        <br>
+        <div class="row g-3 align-items-center">
+
+            <div class="col-5">
+                <textarea style="background-color: #1D1D26; border-color: #FC76A1; color: white;" type="text"
+                    id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" rows="3"
+                    placeholder="Explain the specific bond between you two!"></textarea>
+            </div>
+
+        </div>
+
+        <br><br>
+        <div class="container my-5">
+            <h1>Anything <span style="color: #FC76A1;">else</span> you want to add?</h1>
+        </div>
+        <hr>
+        <br>
+        <div class="row g-3 align-items-center">
+
+            <div class="col-6">
+                <textarea style="background-color: #1D1D26; border-color: #FC76A1; color: white;" type="text"
+                    id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" rows="8 "
+                    placeholder="Enter anything extra that you want to add which would describe more about the person."></textarea>
+            </div>
+
+        </div>
+        <br>
+        <hr>
+        <button data-bs-toggle="modal"
+        data-bs-target="#exampleModal3" class="btn btn-lg hover-item" style="background-color: #FEC3D6; font-weight: 900;"><i
+                class="fa-solid fa-circle-plus" style="color: #ed1e79;"></i> &nbspPOST</button>
+        <br>
+        <br>
+    </div>
+
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content"
+                style="background-color: #1C1D22; color: white; border-color: #FC76A1; border-radius: 1vw;">
+                <div class="modal-header" style="border-color:#FC76A1;">
+                    <h5 class="modal-title" id="exampleModalLabel3" style="color: #FC76A1;">Ask Posted</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body" style="text-align: center;">
+                    <i class="far fa-check-circle" style="font-size: 15rem; color: #FC76A1;"></i>
+                </div>
+                <div class="modal-footer">
+                    <a href="browse.html" type="button" class="btn" style="background-color: #ed1e79; color: white;">Check out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
